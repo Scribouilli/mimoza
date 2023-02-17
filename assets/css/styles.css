@@ -65,7 +65,7 @@ header {
   background-color: var(--couleur-primaire);
 }
 
-header .container{
+header .container {
   display: flex;
   justify-content: flex-end;
 }
@@ -79,15 +79,23 @@ header ul {
 }
 
 footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 4px solid var(--couleur-primaire);
 }
 
 main {
+  min-height: 80vh;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .container {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 h1,
