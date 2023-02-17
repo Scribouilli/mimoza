@@ -1,5 +1,5 @@
 :root {
-  --couleur-primaire: seagreen;
+  --couleur-primaire: #2a6442;
 
   --underline-max-width: 100%;
   --underline-hover-width: 0;
@@ -56,13 +56,22 @@ html {
 }
 
 body {
+  margin: 0;
   font-size: 1.125rem;
   line-height: 1.4;
 }
 
 header {
+  background-color: var(--couleur-primaire);
+}
+
+header .container{
   display: flex;
   justify-content: flex-end;
+}
+
+header a {
+  color: white;
 }
 
 header ul {
