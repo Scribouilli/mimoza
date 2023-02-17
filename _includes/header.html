@@ -2,9 +2,9 @@
   <div class="container">
     <nav>
       <ul>
-        <li>
-          <a href="/">Accueil</a>
-        </li>
+        {% for page in site.pages %}
+          <li><a href="{{page.url | prepend: site.baseurl}}">{{page.title}}</a></li>
+        {% endfor %}
       </ul>
     </nav>
   </div>
