@@ -206,3 +206,7 @@ pre {
 pre code {
   background: none;
 }
+
+img {
+  max-width: 100%;
+}
