@@ -81,6 +81,10 @@ header ul {
   gap: 1rem;
 }
 
+header li + li {
+  margin-top: 0;
+}
+
 footer {
   padding-top: 1rem;
   padding-bottom: 1rem;
