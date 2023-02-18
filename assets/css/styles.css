@@ -92,13 +92,15 @@ footer {
 }
 
 main {
+  width: 80ch;
   min-height: 80vh;
+  margin: 0 auto;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
   padding-right: 1rem;
@@ -122,20 +124,31 @@ h1 {
 h2 {
   font-size: 2.25rem;
 }
+p ~ h2,
+p ~ h3,
+p ~ h4,
+p ~ h5,
+p ~ h6 {
+  margin-top: 3rem;
+}
 
 h3 {
+  margin-bottom: 1.6rem;
   font-size: 1.8rem;
 }
 
 h4 {
+  margin-bottom: 1.4rem;
   font-size: 1.4rem;
 }
 
 h5 {
+  margin-bottom: 1.25rem;
   font-size: 1.25rem;
 }
 
 h6 {
+  margin-bottom: 1rem;
   font-size: 1.125rem;
 }
 
