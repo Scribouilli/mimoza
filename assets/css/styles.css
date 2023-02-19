@@ -79,6 +79,7 @@ header ul {
   align-items: center;
   list-style: none;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 header li + li {
