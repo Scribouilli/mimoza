@@ -2,8 +2,11 @@
   <div class="container">
     <nav>
       <ul>
-        {% for page in site.pages %}
-          <li><a href="{{page.url | prepend: site.baseurl}}">{{page.title}}</a></li>
+        <li><a href="/">Accueil</a></li>
+        {% for page in site.pages | sort: "title" %}
+        {% if page.title != "Accueil" %}
+        <li><a href="{{page.url | prepend: site.baseurl }}">{{page.title}}</a></li>
+        {% endif %}
         {% endfor %}
       </ul>
     </nav>
