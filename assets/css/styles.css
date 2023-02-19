@@ -92,7 +92,7 @@ footer {
 }
 
 main {
-  width: 70ch;
+  max-width: 70ch;
   min-height: 80vh;
   margin: 0 auto;
   padding-top: 3rem;
