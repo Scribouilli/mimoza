@@ -2,7 +2,7 @@
   <div class="container">
     <nav>
       <ul>
-        {% assign page_accueil = site.pages | find: "name", "index.md" %}
+        {% assign page_accueil = site.pages | find_exp:"page", "page.name == 'index.md'" %}
         <li><a href="{{ '/' | relative_url }}">{{page_accueil.title}}</a></li>
         
         {% for page in site.pages | sort: "title" %}
