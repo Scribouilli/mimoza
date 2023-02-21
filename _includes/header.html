@@ -6,7 +6,7 @@
           <li><a href="{{ '/' | relative_url }}">{{page.title}}</a></li>
         {% endif %}
         {% for page in site.pages | sort: "title" %}
-          {% if page.name =! "index.md" %}
+          {% if page.name != "index.md" %}
             <li><a href="{{page.url | prepend: site.baseurl }}">{{page.title}}</a></li>
           {% endif %}
         {% endfor %}
