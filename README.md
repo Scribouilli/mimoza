@@ -1,5 +1,7 @@
-# scribouilli-theme
+# Mimoza
 Peut-être le thème par défaut pour Scribouilli
+
+Le nom vient du fait qu'il a été créé pendant que le mimosa était en fleur et le z c'est parce que c'est comme ça en Bretagne.
 
 ## Note
 
