@@ -59,6 +59,8 @@ body {
   margin: 0;
   font-size: 1.125rem;
   line-height: 1.4;
+  color: black;
+  background-color: white;
 }
 
 header {
