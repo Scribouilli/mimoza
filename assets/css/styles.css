@@ -213,3 +213,23 @@ pre code {
 img {
   max-width: 100%;
 }
+
+.blog-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.blog-item > a {
+  align-self: flex-end;
+}
+
+.blog-item h2 {
+  margin-bottom: 1rem;
+}
+
+.blog-item h2 a {
+  background: none;
+}

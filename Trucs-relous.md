@@ -1,4 +1,7 @@
-# Trucs relous
+---
+title: Trucs relous
+---
+
 
 ## Les chemins pour le CSS et les fonts
 Dans le template `default.html` on définissait `href="{{site.url}}/assets/css/custom.css"` et ça mettait une erreur CORS sur la typo et elle ne se chargeait pas.
