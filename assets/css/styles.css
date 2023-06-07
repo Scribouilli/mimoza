@@ -233,3 +233,17 @@ img {
 .blog-item h2 a {
   background: none;
 }
+
+.projects {
+  display: flex;
+  gap: 4rem 2.5rem;
+  flex-wrap: wrap;
+}
+
+.project {
+  flex-basis: calc(50% - 1.25rem);
+}
+
+.project h2 a {
+  background: none;
+}
