@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Condor Scan
-vignette_url: /img/vignette/projets/condor.jpg
+vignette_url: 
 problematique: Adapter une application métier pour toutes tailles d'écrans
 competences: Mobile first · Refonte Responsive
 categories: ui

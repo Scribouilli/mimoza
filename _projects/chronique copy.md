@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Chronique d'activité 2.0
-vignette_url: /img/vignette/projets/chronique.jpg
+vignette_url: /assets/img/chat.jpg
 problematique: Réaliser une chronique d'activité
 competences: Prototypage fonctionnel
 categories: side

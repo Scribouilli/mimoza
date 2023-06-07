@@ -9,6 +9,9 @@ permalink: /projets/
 <div class="projects">
   {% for project in site.projects %}
   <article class="project">
+
+     <img src="{{project.vignette_url}}" alt="">
+
     <h2>
       <a href="{{project.url}}"> {{ project.title }} </a>
     </h2>
@@ -16,4 +19,20 @@ permalink: /projets/
     <a href="{{project.url}}"> Voir le projet ➞ </a>
   </article>
   {% endfor %}
+
+  {% for project in site.projects %}
+  <article class="project">
+
+     <img src="{{project.vignette_url}}" alt="">
+     
+    <h2>
+      <a href="{{project.url}}"> {{ project.title }} </a>
+    </h2>
+
+    <a href="{{project.url}}"> Voir le projet ➞ </a>
+  </article>
+  {% endfor %}
+
 </div>
+
+

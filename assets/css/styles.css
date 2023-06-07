@@ -211,6 +211,7 @@ pre code {
 }
 
 img {
+  display: block;
   max-width: 100%;
 }
 
@@ -228,6 +229,7 @@ img {
 
 .blog-item h2 {
   margin-bottom: 1rem;
+  font-weight: normal;
 }
 
 .blog-item h2 a {
@@ -242,8 +244,25 @@ img {
 
 .project {
   flex-basis: calc(50% - 1.25rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.project img {
+  max-height: 25rem;
+  margin: 0 auto;
+}
+
+.project h2 {
+  margin: 1rem 0;
+  font-weight: normal;
+  font-size: 2rem;
 }
 
 .project h2 a {
   background: none;
+}
+
+.project > a {
+  align-self: flex-end;
 }
