@@ -1,7 +1,19 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: blog
+layout: default
 title: Articles
+permalink: /articles/
 ---
+<h1>
+  Articles
+</h1>
+
+{% for post in site.posts %}
+<article class="blog-item">
+  <h2>
+    <a href="{{post.url | relative_url}}"> {{ post.title }} </a>
+  </h2>
+
+  <a href="{{post.url | relative_url}}"> Lire l'article ➞ </a>
+</article>
+<hr />
+{% endfor %}
