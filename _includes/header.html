@@ -4,16 +4,20 @@
   <div class="container">
     <nav>
       <ul>
-        {% for page in site.pages %} {% if page.name == "index.md" %}
+        {% for page in site.pages %} 
+        {% if page.name == "index.md" %}
         <li>
           <a href="{{page.url | prepend: site.baseurl }}">{{page.title}}</a>
         </li>
-        {% endif %} {% endfor %} {% for page in site.pages | sort: "title" %} {%
-        if page.name != "index.md" %}
+        {%- endif -%}
+        {% endfor %} 
+        {% for page in site.pages | sort: "title" %} 
+        {% if page.name != "index.md" %}
         <li>
           <a href="{{page.url | prepend: site.baseurl }}">{{page.title}}</a>
         </li>
-        {% endif %} {% endfor %}
+        {% endif %} 
+        {% endfor %}
       </ul>
     </nav>
   </div>
