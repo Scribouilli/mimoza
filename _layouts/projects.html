@@ -13,10 +13,10 @@ permalink: /projets/
      <img src="{{project.vignette_url}}" alt="">
 
     <h2>
-      <a href="{{project.url}}"> {{ project.title }} </a>
+      <a href="{{project.url | relative_url}}"> {{ project.title }} </a>
     </h2>
 
-    <a href="{{project.url}}"> Voir le projet ➞ </a>
+    <a href="{{project.url | relative_url}}"> Voir le projet ➞ </a>
   </article>
   {% endfor %}
 
