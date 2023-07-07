@@ -6,3 +6,9 @@ Le nom vient du fait qu'il a été créé pendant que le mimosa était en fleur 
 ## Note
 
 Les repos qui utilisent ce thème peuvent customiser leur style en mettant un fichier au chemin `assets/css/custom.css` ! Youpi !
+
+## Développement 
+
+Après avoir cloné le repo : 
+- `bundle install`
+- `bundle exec jekyll serve --livereload`
