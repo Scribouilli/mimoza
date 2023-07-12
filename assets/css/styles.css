@@ -63,6 +63,16 @@ body {
   background-color: white;
 }
 
+.skip-links {
+  position: absolute;
+  transform: translateY(-100%);
+  color: white;
+}
+
+.skip-links:focus {
+  transform: translateY(0%);
+}
+
 header {
   background-color: var(--couleur-primaire);
 }
