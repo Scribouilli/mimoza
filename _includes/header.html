@@ -5,10 +5,11 @@
     <nav>
       <ul>
         {% comment %}
-          The nav_pages variable construction could be simplified with Jekyll 4+ expressions, but we're using Jekyll 3.9 
+          The nav_pages variable construction could be simplified with Jekyll 4+ complex where_exp expressions, 
+          but we're using Jekyll 3.9 
         {% endcomment %}
-        {% assign true_menu_pages = site.pages | where: "in_menu", true %}
-        {% assign nil_menu_pages = site.pages | where: "in_menu", nil %}
+        {% assign true_menu_pages = site.pages | where_exp: "page", "page.in_menu == true" %}
+        {% assign nil_menu_pages = site.pages | where_exp: "page", "page.in_menu == nil" %}
 
         {% assign nav_pages = true_menu_pages | concat: nil_menu_pages | sort: "order" %}
         {% for page in nav_pages %} 
