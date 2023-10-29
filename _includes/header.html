@@ -4,7 +4,7 @@
   <div class="container">
     <nav>
       <ul>
-        {% assign nav_pages = site.pages | where_exp:"in_menu", "in_menu == true or in_menu == nil" | sort: "order" %}
+        {% assign nav_pages = site.pages | where_exp: "page", "page.in_menu == true or page.in_menu == nil" | sort: "order" %}
         {% for page in nav_pages %} 
         <li>
           <a href="{{page.url | prepend: site.baseurl }}">{{page.title}}</a>
