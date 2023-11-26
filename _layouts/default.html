@@ -13,7 +13,10 @@
       {% else %} {{ page.title }}
     {% endif %}
   </title>
-  <link type="application/atom+xml" rel="alternate" href="{{ '/feed.xml' | absolute_url }}" title="Portfolio de Maïtané Lenoir">
+  <link type="application/atom+xml" rel="alternate" href="{{ '/feed.xml' | absolute_url }}" title="
+    {%- if site.title -%}{{ site.title | escape -}}
+      {%- else -%} Flux RSS du site
+    {%- endif -%}">
 </head>
 
 <body>
