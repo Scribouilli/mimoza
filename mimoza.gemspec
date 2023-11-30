@@ -16,8 +16,15 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_runtime_dependency "jekyll", "~> 4.0"
-  spec.add_runtime_dependency "jekyll-feed", "~> 0.9"
-  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.1"
+  spec.add_runtime_dependency "jekyll-redirect-from", "~> 0.16"
+  spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4"
+  spec.add_runtime_dependency "jekyll-feed", "~> 0.17"
+  spec.add_runtime_dependency "jekyll-paginate-v2", "~> 3.0"
+  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.8"
+  spec.add_runtime_dependency "jekyll-optional-front-matter", "~> 0.3"
+  spec.add_runtime_dependency "jekyll-default-layout", "~> 0.1.5"
+  spec.add_runtime_dependency "jekyll-titles-from-headings", "~> 0.5.3"
+
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 12.0"
