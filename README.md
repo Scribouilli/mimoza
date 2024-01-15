@@ -12,3 +12,7 @@ Les repos qui utilisent ce thème peuvent customiser leur style en mettant un fi
 Après avoir cloné le repo : 
 - `bundle install`
 - `bundle exec jekyll serve --livereload`
+
+## Langage
+
+- les commits sont en français
