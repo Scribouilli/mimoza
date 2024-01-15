@@ -3,12 +3,21 @@
 <header>
 	<div class="container">
 		<nav>
-			<ul>
-				{% assign homepage = site.html_pages | find_exp: "page", "page.path == 'index.md'"  %}
-				<li>
-					<a href="{{ homepage.url | relative_url }}">{{homepage.title}}</a>
-				</li>
+			{% assign homepage = site.html_pages | find_exp: "page", "page.path == 'index.md'"  %}
+			{% if page.path != homepage.path %}
+				<a href="{{ homepage.url | relative_url }}" class="site-title">
+					{{ site.title | default: homepage.title }}
+				</a>
+			{% else %}
+				<span class="site-title">
+					{{ site.title | default: homepage.title }}</span>
+			{% endif %}
 
+			<button>
+				Menu
+			</button>
+
+			<ul>
 				{% assign nav_pages = site.html_pages | where_exp: "page", "page.in_menu == true or page.in_menu == nil" | sort: "order" %}
 
 				{% for page in nav_pages %}
@@ -22,3 +31,11 @@
 		</nav>
 	</div>
 </header>
+
+<script>
+	document.addEventListener("DOMContentLoaded",()=>{
+		document.querySelector("header nav button").addEventListener("click", ()=> {
+			document.querySelector("header nav ul").classList.toggle("displayed");
+		})
+	})
+</script>
