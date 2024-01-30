@@ -13,9 +13,9 @@
 					{{ site.title | default: homepage.title }}</span>
 			{% endif %}
 
-			<button>
+			<a href="#nav" class="mobile-nav">
 				Menu
-			</button>
+			</a>
 
 			<ul>
 				{% assign nav_pages = site.html_pages | where_exp: "page", "page.in_menu == true or page.in_menu == nil" | sort: "order" %}
@@ -31,11 +31,3 @@
 		</nav>
 	</div>
 </header>
-
-<script>
-	document.addEventListener("DOMContentLoaded",()=>{
-		document.querySelector("header nav button").addEventListener("click", ()=> {
-			document.querySelector("header nav ul").classList.toggle("displayed");
-		})
-	})
-</script>

@@ -1,5 +1,22 @@
-<footer>
+<footer id="footer">
   <div class="container">
-    Typo <a href="http://www.luciole-vision.com">Luciole</a>
+    <nav id="nav">
+      <h2>Navigation</h2>
+      <ul>
+				{% assign nav_pages = site.html_pages | where_exp: "page", "page.in_menu == true or page.in_menu == nil" | sort: "order" %}
+
+				{% for page in nav_pages %}
+					{% if page != homepage %}
+						<li>
+							<a href="{{ page.url | relative_url }}">{{page.title}}</a>
+						</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+    </nav>
+
+    <nav>
+      <a href="">Mentions légales</a>
+    </nav>
   </div>
 </footer>
