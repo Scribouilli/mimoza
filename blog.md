@@ -1,11 +1,9 @@
 ---
-layout: default
+layout: page
 title: Articles
 permalink: /articles/
 ---
-<h1>
-  Articles
-</h1>
+
 <aside>
   <a href="{{ '/feed.xml' | relative_url }}">S'abonner via le flux RSS</a>
   &mdash;
