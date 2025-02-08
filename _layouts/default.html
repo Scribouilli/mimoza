@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 
+<!-- scribouilli-git-hash: {{ site.data['hash'] | default 'unknown' }} -->
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,7 +12,7 @@
   <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}" />
   <title>
     {% if site.title %} {{ page.title }} - {{ site.title }}
-      {% else %} {{ page.title }}
+    {% else %} {{ page.title }}
     {% endif %}
   </title>
   <link type="application/atom+xml" rel="alternate" href="{{ '/feed.xml' | absolute_url }}" title="
