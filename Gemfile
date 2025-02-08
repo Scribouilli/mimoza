@@ -26,6 +26,9 @@ group :jekyll_plugins do
 
   # Generate default titles from headings
   gem "jekyll-titles-from-headings", "~> 0.5.3"
+
+  # Include a hash of the built commit in the final HTML
+  gem "jekyll-git-hash", "~> 0.1.1"
 end
 
 group :development do
