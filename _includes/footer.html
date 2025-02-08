@@ -1,22 +1,26 @@
 <footer id="footer">
   <div class="container">
-    <nav id="nav">
-      <h2>Navigation</h2>
+    <div id="nav">
+      <h2>Menu</h2>
       <ul>
-				{% assign nav_pages = site.html_pages | where_exp: "page", "page.in_menu == true or page.in_menu == nil" | sort: "order" %}
+        {% assign nav_pages = site.html_pages | where_exp: "page", "page.in_menu
+        == true or page.in_menu == nil" | sort: "order" %}
+        <li>
+          {% if page.path != homepage.path %}
+          <a href="{{ homepage.url | relative_url }}">
+            {{ site.title | default: homepage.title }}
+          </a>
+          {% else %}
+          <span> {{ site.title | default: homepage.title }}</span>
+          {% endif %}
+        </li>
 
-				{% for page in nav_pages %}
-					{% if page != homepage %}
-						<li>
-							<a href="{{ page.url | relative_url }}">{{page.title}}</a>
-						</li>
-					{% endif %}
-				{% endfor %}
-			</ul>
-    </nav>
-
-    <nav>
-      <a href="">Mentions légales</a>
-    </nav>
+        {% for page in nav_pages %} {% if page != homepage %}
+        <li>
+          <a href="{{ page.url | relative_url }}">{{page.title}}</a>
+        </li>
+        {% endif %} {% endfor %}
+      </ul>
+    </div>
   </div>
 </footer>

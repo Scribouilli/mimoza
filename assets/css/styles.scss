@@ -129,20 +129,52 @@ header {
 }
 
 footer {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-top: 4px solid var(--couleur-primaire);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: var(--couleur-primaire);
 
   .container {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 3rem;
   }
 
   h2 {
-    margin-bottom: .5rem;
+    margin-bottom: 1.5rem;
     font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style-type: ""
+  }
+
+  li:not(:first-child) {
+    margin-top: 1rem;
+  }
+
+  &,
+  a {
+    color: white;
+  }
+
+  @media screen and (min-width: 62rem) {
+   .container {
+    flex-direction:row;
+   }
+
+   ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    li:not(:first-child)  {
+      margin-top: 0;
+    }
+   }
   }
 }
 
