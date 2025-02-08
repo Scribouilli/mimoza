@@ -6,13 +6,9 @@
         {% assign nav_pages = site.html_pages | where_exp: "page", "page.in_menu
         == true or page.in_menu == nil" | sort: "order" %}
         <li>
-          {% if page.path != homepage.path %}
           <a href="{{ homepage.url | relative_url }}">
             {{ site.title | default: homepage.title }}
           </a>
-          {% else %}
-          <span> {{ site.title | default: homepage.title }}</span>
-          {% endif %}
         </li>
 
         {% for page in nav_pages %} {% if page != homepage %}
