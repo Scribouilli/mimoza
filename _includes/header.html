@@ -1,23 +1,33 @@
 <a href="#main" class="skip-links">Accès direct au contenu</a>
+
 <header>
+	<div class="container">
+		<nav>
+			{% assign homepage = site.html_pages | find_exp: "page", "page.path == 'index.md'"  %}
+			{% if page.path != homepage.path %}
+				<a href="{{ homepage.url | relative_url }}" class="site-title">
+					{{ site.title | default: homepage.title }}
+				</a>
+			{% else %}
+				<span class="site-title">
+					{{ site.title | default: homepage.title }}</span>
+			{% endif %}
 
-  <div class="container">
-    <nav>
-      <ul>
-        {% comment %}
-          The nav_pages variable construction could be simplified with Jekyll 4+ complex where_exp expressions, 
-          but we're using Jekyll 3.9 
-        {% endcomment %}
-        {% assign true_menu_pages = site.pages | where_exp: "page", "page.in_menu == true" %}
-        {% assign nil_menu_pages = site.pages | where_exp: "page", "page.in_menu == nil" %}
+			<a href="#nav" class="mobile-nav">
+				Menu
+			</a>
 
-        {% assign nav_pages = true_menu_pages | concat: nil_menu_pages | sort: "order" %}
-        {% for page in nav_pages %} 
-        <li>
-          <a href="{{page.url | prepend: site.baseurl }}">{{page.title}}</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </nav>
-  </div>
+			<ul>
+				{% assign nav_pages = site.html_pages | where_exp: "page", "page.in_menu == true or page.in_menu == nil" | sort: "order" %}
+
+				{% for page in nav_pages %}
+					{% if page != homepage %}
+						<li>
+							<a href="{{ page.url | relative_url }}">{{page.title}}</a>
+						</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</nav>
+	</div>
 </header>

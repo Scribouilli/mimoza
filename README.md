@@ -13,6 +13,10 @@ Après avoir cloné le repo :
 - `bundle install`
 - `bundle exec jekyll serve --livereload`
 
+### Compatibilité
+
+Jekyll 4.1+
+
 ## Langage
 
 - les commits sont en français
