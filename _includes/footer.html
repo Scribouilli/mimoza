@@ -1,4 +1,4 @@
-<footer id="footer">
+<footer id="footer" role="contentinfo">
   <div class="container">
     <div id="nav">
       <h2>Menu</h2>
@@ -11,11 +11,15 @@
           </a>
         </li>
 
-        {% for page in nav_pages %} {% if page != homepage %}
-        <li>
-          <a href="{{ page.url | relative_url }}">{{page.title}}</a>
-        </li>
-        {% endif %} {% endfor %}
+        {% for nav_page in nav_pages %}
+					{% if nav_page != homepage %}
+						<li>
+							<a href="{{ nav_page.url | relative_url }}" {% if page.url == nav_page.url %} aria-current="page" {% endif %}>
+								{{nav_page.title}}
+							</a>
+						</li>
+					{% endif %}
+				{% endfor %}
       </ul>
     </div>
   </div>
