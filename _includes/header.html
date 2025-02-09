@@ -9,7 +9,7 @@
 					{{ site.title | default: homepage.title }}
 				</a>
 			{% else %}
-				<span class="site-title">
+				<span class="site-title" aria-current="page">
 					{{ site.title | default: homepage.title }}</span>
 			{% endif %}
 
@@ -20,10 +20,12 @@
 			<ul>
 				{% assign nav_pages = site.html_pages | where_exp: "page", "page.in_menu == true or page.in_menu == nil" | sort: "order" %}
 
-				{% for page in nav_pages %}
-					{% if page != homepage %}
+				{% for nav_page in nav_pages %}
+					{% if nav_page != homepage %}
 						<li>
-							<a href="{{ page.url | relative_url }}">{{page.title}}</a>
+							<a href="{{ nav_page.url | relative_url }}" {% if page.url == nav_page.url %} aria-current="page" {% endif %}>
+								{{nav_page.title}}
+							</a>
 						</li>
 					{% endif %}
 				{% endfor %}
