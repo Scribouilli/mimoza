@@ -327,22 +327,26 @@ iframe {
   margin-bottom: 2rem;
 
   & > a {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     align-self: flex-end;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
   }
 
   h2 {
     margin-bottom: 1rem;
-    font-weight: normal; 
+    font-weight: normal;
     color: var(--couleur-primaire);
 
     a {
       background: none;
-    }  
+    }
   }
 }
 
